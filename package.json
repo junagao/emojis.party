@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "emojis.party",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Google for emojis. Find emojis instantly.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Juliane Nagao <julianens@gmail.com> (http://junagao.com)",
   "dependencies": {
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
@@ -22,7 +22,7 @@
     "prettier": "^1.19.1"
   },
   "keywords": [
-    "gatsby"
+    "emoji", "google for emojis", "search emoji", "find emoji"
   ],
   "license": "MIT",
   "scripts": {
@@ -36,9 +36,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/junagao/emojis.party.git"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/junagao/emojis.party/issues"
   }
 }
