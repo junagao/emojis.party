@@ -5,7 +5,7 @@ module.exports = {
     author: `juliane nagao`,
     siteUrl: `https://emojis.party`,
     social: {
-      github: `https://github.com/junagao/emojis-party`,
+      github: `https://github.com/junagao/emojis.party`,
     },
     keywords: [
       `search`,
