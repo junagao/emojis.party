@@ -1,8 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `emojis.party`,
+    description: `Google, but for emojis. Find emojis instantly using keywords like 'red', 'love', 'beach' or 'food'.`,
+    author: `juliane nagao`,
+    siteUrl: `https://emojis.party`,
+    social: {
+      github: `https://github.com/junagao/emojis-party`,
+    },
+    keywords: [
+      `search`,
+      `find`,
+      `emojis`,
+      `finder`,
+      `searcher`,
+      `google for emojis`,
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,17 +30,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `emojis.party`,
+        short_name: `emojis.party`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
