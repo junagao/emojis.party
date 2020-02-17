@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `emojis.party`,
-    description: `Google, but for emojis. Find emojis instantly using keywords like 'red', 'love', 'beach' or 'food'.`,
+    description: `Google, but for emojis.`,
     author: `juliane nagao`,
     siteUrl: `https://emojis.party`,
     social: {
