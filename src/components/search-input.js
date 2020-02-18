@@ -21,7 +21,7 @@ const StyledInput = styled.input`
   z-index: 1;
   :focus {
     border: 1px solid rgb(233, 60, 60, 0.4);
-
+    box-shadow: 2px 3px 0px 0px rgba(233, 60, 60, 0.5);
     background-color: #fff;
   }
   ::placeholder {
