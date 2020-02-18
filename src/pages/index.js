@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react"
+import styled from "styled-components"
 import data from "../data/data.json"
 
 import Layout from "../components/layout"
+import Header from "../components/header"
 import SearchInput from "../components/search-input"
 import SearchResults from "../components/search-results"
 import CopyEmoji from "../components/copy-emoji"
 import SEO from "../components/seo"
+
+const StyledContainer = styled.div`
+  background-color: #fff8fc;
+  display: flex;
+  justify-content: column;
+  align-items: center;
+  padding: 24px 64px;
+  width: 100%;
+`
 
 const IndexPage = () => {
   const [searchTerm, setSearchTerm] = useState("")
@@ -77,18 +88,25 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout>
-      <SEO title="Home" />
-      <>
-        <SearchInput searchTerm={searchTerm} onTermChange={handleTermChange} />
+    <>
+      <CopyEmoji copySuccess={copySuccess} copiedValue={copiedValue} />
+      <Layout>
+        <SEO title="Home" />
+        <StyledContainer>
+          <Header />
+          <SearchInput
+            searchTerm={searchTerm}
+            onTermChange={handleTermChange}
+          />
+        </StyledContainer>
+
         <SearchResults
           searchTerm={searchTerm}
           searchResults={searchResults}
           onCopyToClipboard={handleCopyToClipboard}
         />
-        <CopyEmoji copySuccess={copySuccess} copiedValue={copiedValue} />
-      </>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 
