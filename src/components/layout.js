@@ -1,16 +1,38 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { createGlobalStyle } from "styled-components"
 
-import Header from "./header"
 import Footer from "./footer"
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background-color: #fff8fc;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+  ul {
+  padding: 0;
+  margin: 0;
+  }
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query SiteAuthorGithubQuery {
       site {
         siteMetadata {
-          title
           author
           social {
             github
@@ -21,17 +43,14 @@ const Layout = ({ children }) => {
   `)
 
   const {
-    title,
     author,
     social: { github },
   } = data.site.siteMetadata
 
   return (
     <>
-      <Header siteTitle={title} />
-      <div>
-        <main>{children}</main>
-      </div>
+      <GlobalStyle whiteColor />
+      <main>{children}</main>
       <Footer siteAuthor={author} siteGithub={github} />
     </>
   )
