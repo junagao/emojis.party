@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
@@ -28,23 +27,6 @@ const Nav = styled.div`
   max-width: 50%;
 `
 
-const StyledDivider = styled.span`
-  margin-left: 10px;
-  margin-right: 10px;
-`
-
-const StyledInternalLink = styled(props => <Link {...props} />)`
-  font-family: Avenir, sans-serif;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: none;
-
-  visited {
-    color: #fff;
-    text-decoration: none;
-  }
-`
-
 const StyledExternalLink = styled.a`
   font-family: Avenir, sans-serif;
   font-weight: 500;
@@ -70,8 +52,6 @@ const Footer = ({ siteAuthor, siteGithub }) => (
       </StyledExternalLink>
     </MadeWithLove>
     <Nav>
-      <StyledInternalLink to="/about">about</StyledInternalLink>
-      <StyledDivider className="divider">|</StyledDivider>
       <StyledExternalLink href={siteGithub}>github</StyledExternalLink>
     </Nav>
   </FooterContainer>
