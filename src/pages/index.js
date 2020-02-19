@@ -79,7 +79,7 @@ const IndexPage = () => {
   const handleTermChange = e => setSearchTerm(e.target.value)
 
   const handleCopyToClipboard = value => {
-    navigator.clipboard.writeText(value)
+    document.execCommand(value)
     setCopiedValue(value)
     setCopySuccess(true)
     setTimeout(() => {
