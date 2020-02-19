@@ -49,7 +49,7 @@ const StyledExternalLink = styled.a`
 const Footer = ({ siteAuthor, siteGithub }) => (
   <FooterContainer>
     <MadeWithLove>
-      made with{" "}
+      Made with{" "}
       <span role="img" aria-label="heart">
         ❤️
       </span>{" "}
@@ -59,7 +59,7 @@ const Footer = ({ siteAuthor, siteGithub }) => (
       </StyledExternalLink>
     </MadeWithLove>
     <Nav>
-      <StyledExternalLink href={siteGithub}>github</StyledExternalLink>
+      <StyledExternalLink href={siteGithub}>Github</StyledExternalLink>
     </Nav>
   </FooterContainer>
 )

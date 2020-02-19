@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `emojis.party`,
     description: `Google, but for emojis.`,
-    author: `juliane nagao`,
+    author: `Juliane Nagao`,
     siteUrl: `https://emojis.party`,
     social: {
       github: `https://github.com/junagao/emojis.party`,
