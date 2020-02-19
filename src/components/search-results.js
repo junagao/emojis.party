@@ -30,11 +30,9 @@ const StyledResultsList = styled.ul`
   flex-wrap: wrap;
 `
 
-const StyledResultsListItem = styled.li``
-
 const StyledEmojiButton = styled.button`
   font-size: 88px;
-  padding: 32px 38px;
+  padding: 28px 34px;
   transition: all 0.25s ease-out;
   cursor: pointer;
   background: transparent;
@@ -52,14 +50,14 @@ const SearchResults = ({ searchTerm, searchResults, onCopyToClipboard }) =>
     <StyleResultsContainer>
       <StyledResultsList>
         {searchResults.map(emoji => (
-          <StyledResultsListItem key={emoji.unicode}>
+          <li key={emoji.unicode}>
             <StyledEmojiButton
               type="button"
               onClick={() => onCopyToClipboard(emoji.char)}
             >
               {emoji.char}
             </StyledEmojiButton>
-          </StyledResultsListItem>
+          </li>
         ))}
       </StyledResultsList>
     </StyleResultsContainer>
