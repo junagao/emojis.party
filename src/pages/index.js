@@ -10,12 +10,12 @@ import CopyEmoji from "../components/copy-emoji"
 import SEO from "../components/seo"
 
 const StyledContainer = styled.div`
-  background-color: #fff8fc;
+  background-color: #f8ebf0;
   display: flex;
-  justify-content: column;
+  flex-direction: column;
   align-items: center;
-  padding: 24px 64px;
-  width: 100%;
+  text-align: center;
+  padding: 32px;
 `
 
 const IndexPage = () => {
@@ -99,7 +99,6 @@ const IndexPage = () => {
             onTermChange={handleTermChange}
           />
         </StyledContainer>
-
         <SearchResults
           searchTerm={searchTerm}
           searchResults={searchResults}

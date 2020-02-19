@@ -32,7 +32,7 @@ const StyledCopied = styled.div`
   background-color: rgba(255, 255, 255, 0.95);
   color: rgb(233, 60, 60);
   font-weight: 600;
-  padding: 32px 40px;
+  padding: 24px 40px;
   text-align: center;
   border-radius: 70px;
   z-index: 2;

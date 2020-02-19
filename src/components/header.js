@@ -5,28 +5,38 @@ import styled from "styled-components"
 
 const StyledHeader = styled.header`
   font-family: Avenir, sans-serif;
-  margin-right: 40px;
-  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
 `
 
 const StyledLogo = styled.div`
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 900;
   a {
-    color: rgb(233, 60, 60);
+    color: #e35354;
     text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    font-size: 56px;
   }
 `
 
 const StyledTagline = styled.p`
-  color: #777;
-  font-size: 16px;
+  color: #666;
+  font-weight: 400;
   margin-top: 5px;
   width: 80%;
+  margin-left: -32px;
+  font-size: 20px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 
 const StyledSpan = styled.span`
-  font-weight: 600;
+  font-weight: 900;
 `
 
 const Header = () => {

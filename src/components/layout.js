@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   body {
-    background-color: #fff8fc;
+    background-color: #fff;
     font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }

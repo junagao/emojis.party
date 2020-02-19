@@ -11,16 +11,23 @@ const FooterContainer = styled.footer`
   font-family: Avenir, sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
-  background-color: rgba(233, 60, 60, 0.95);
+  background-color: #e35354;
   color: #fff;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   z-index: 2;
+  align-items: center;
+  @media (max-width: 768px) {
+    padding: 16px 32px;
+  }
 `
 
 const MadeWithLove = styled.div`
   max-width: 50%;
+  @media (max-width: 768px) {
+    max-width: 70%;
+  }
 `
 
 const Nav = styled.div`
