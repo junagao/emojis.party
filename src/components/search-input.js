@@ -8,6 +8,9 @@ const StyledInputContainer = styled.div`
 `
 
 const StyledInput = styled.input`
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 12px 32px 16px 32px;
   border: 1px solid transparent;
   border-radius: 54px;
