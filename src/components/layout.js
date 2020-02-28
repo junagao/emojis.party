@@ -1,14 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 
 import Footer from "./footer"
 
 const GlobalStyle = createGlobalStyle`
   * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
   }
   body {
     background-color: #fff;
@@ -19,13 +21,20 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
   }
-  html {
-    box-sizing: border-box;
-  }
-
   *, *:before, *:after {
     box-sizing: inherit;
   }
+`
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+`
+
+const StyledMainContent = styled.main`
+  flex: 1 0 auto;
 `
 
 const Layout = ({ children }) => {
@@ -48,11 +57,11 @@ const Layout = ({ children }) => {
   } = data.site.siteMetadata
 
   return (
-    <>
+    <StyledContainer>
       <GlobalStyle whiteColor />
-      <main>{children}</main>
+      <StyledMainContent>{children}</StyledMainContent>
       <Footer siteAuthor={author} siteGithub={github} />
-    </>
+    </StyledContainer>
   )
 }
 

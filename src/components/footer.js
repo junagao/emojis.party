@@ -1,25 +1,25 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { device } from "../helpers/device"
 
 const FooterContainer = styled.footer`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 16px 64px;
-  font-family: Avenir, sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
+  padding: 16px 32px;
+  font-size: 16px;
   background-color: #e35354;
   color: #fff;
   display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
-  z-index: 2;
-  align-items: center;
-  @media (max-width: 768px) {
+  align-items: baseline;
+  @media ${device.mobileLandscape} {
     padding: 16px 32px;
+  }
+  @media ${device.tabletPortrait} {
+    padding: 16px 64px;
+  }
+  @media ${device.tabletLandscape} {
+  }
+  @media ${device.laptop} {
   }
 `
 
@@ -27,6 +27,9 @@ const MadeWithLove = styled.div`
   max-width: 50%;
   @media (max-width: 768px) {
     max-width: 70%;
+  }
+  @media (max-width: 575.98px) {
+    max-width: 90%;
   }
 `
 
@@ -36,11 +39,10 @@ const Nav = styled.div`
 
 const StyledExternalLink = styled.a`
   font-family: Avenir, sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
   text-decoration: none;
-
-  visited {
+  :visited {
     color: #fff;
     text-decoration: none;
   }

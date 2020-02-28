@@ -31,6 +31,9 @@ const StyledInput = styled.input`
     border: 1px solid #ee9898;
     box-shadow: 2px 3px 0px 0px #ee9898;
   }
+  @media (max-width: 575.98px) {
+    font-size: 32px;
+  }
 `
 
 const SearchInput = ({ searchTerm, onTermChange }) => (

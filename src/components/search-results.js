@@ -21,6 +21,9 @@ const StyleResultsContainer = styled.div`
   -moz-animation: ${emojisFadeIn} 0.25s ease-in; /* Firefox */
   -webkit-animation: ${emojisFadeIn} 0.25s ease-in; /* Safari and Chrome */
   -o-animation: ${emojisFadeIn} 0.25s ease-in; /* Opera */
+  @media (max-width: 575.98px) {
+    padding: 0px 8px 120px 8px;
+  }
 `
 
 const StyledResultsList = styled.ul`
@@ -42,6 +45,10 @@ const StyledEmojiButton = styled.button`
   :active {
     background-color: rgba(233, 60, 60, 0.25);
     transition: 1s;
+  }
+  @media (max-width: 575.98px) {
+    font-size: 64px;
+    padding: 10px 16px;
   }
 `
 

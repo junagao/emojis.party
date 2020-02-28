@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import { device } from "../helpers/device"
 
 const StyledHeader = styled.header`
   font-family: Avenir, sans-serif;
@@ -12,14 +13,23 @@ const StyledHeader = styled.header`
 `
 
 const StyledLogo = styled.div`
-  font-size: 60px;
+  font-size: 42px;
   font-weight: 900;
   a {
     color: #e35354;
     text-decoration: none;
   }
-  @media (max-width: 768px) {
-    font-size: 56px;
+  @media ${device.mobileLandscape} {
+    font-size: 60px;
+  }
+  @media ${device.tabletPortrait} {
+    font-size: 60px;
+  }
+  @media ${device.tabletLandscape} {
+    font-size: 60px;
+  }
+  @media ${device.laptop} {
+    font-size: 60px;
   }
 `
 
@@ -27,11 +37,23 @@ const StyledTagline = styled.p`
   color: #666;
   font-weight: 400;
   margin-top: 5px;
-  width: 80%;
+  width: 90%;
   margin-left: -32px;
-  font-size: 20px;
-  @media (max-width: 768px) {
+  font-size: 16px;
+  position: relative;
+  @media ${device.mobileLandscape} {
+    width: 70%;
+    font-size: 20px;
+  }
+  @media ${device.tabletPortrait} {
     font-size: 18px;
+  }
+  @media ${device.tabletLandscape} {
+    font-size: 18px;
+  }
+  @media ${device.laptop} {
+    width: 60%;
+    font-size: 20px;
   }
 `
 
@@ -64,9 +86,9 @@ const Header = () => {
         </Link>
       </StyledLogo>
       <StyledTagline>
-        {description} Find emojis <br />
-        using keywords like <StyledSpan>white</StyledSpan>,{" "}
-        <StyledSpan>love</StyledSpan>, <StyledSpan>food</StyledSpan>.
+        {description} Find emojis using keywords like{" "}
+        <StyledSpan>white</StyledSpan>, <StyledSpan>love</StyledSpan>,{" "}
+        <StyledSpan>food</StyledSpan>.
       </StyledTagline>
     </StyledHeader>
   )
