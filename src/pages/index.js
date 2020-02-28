@@ -79,7 +79,13 @@ const IndexPage = () => {
   const handleTermChange = e => setSearchTerm(e.target.value)
 
   const handleCopyToClipboard = value => {
-    document.execCommand(value)
+    const textarea = document.createElement("textarea")
+    const app = document.getElementById("___gatsby")
+    textarea.value = value
+    app.appendChild(textarea)
+    textarea.select()
+    document.execCommand("copy")
+    app.removeChild(textarea)
     setCopiedValue(value)
     setCopySuccess(true)
     setTimeout(() => {
