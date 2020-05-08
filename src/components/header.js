@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { device } from "../helpers/device"
 
 const StyledHeader = styled.header`
-  font-family: Avenir, sans-serif;
+  font-family: Avenir, Roboto, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;

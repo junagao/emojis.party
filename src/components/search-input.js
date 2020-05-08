@@ -11,15 +11,16 @@ const StyledInput = styled.input`
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 12px 32px 16px 32px;
+  padding: 12px 32px;
   border: 1px solid transparent;
   border-radius: 54px;
   color: #e35354;
   background-color: #fff;
+  font-family: Avenir, Roboto, sans-serif;
+  font-size: 44px;
   font-weight: 700;
-  font-size: 48px;
   outline: none;
-  width: 100%;
+  width: 36rem;
   box-sizing: border-box;
   z-index: 1;
   :focus {
