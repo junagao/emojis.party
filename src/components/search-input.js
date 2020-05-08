@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { device } from "../helpers/device"
 
 const StyledInputContainer = styled.div`
   z-index: 1;
@@ -20,7 +21,7 @@ const StyledInput = styled.input`
   font-size: 44px;
   font-weight: 700;
   outline: none;
-  width: 36rem;
+  width: 28rem;
   box-sizing: border-box;
   z-index: 1;
   :focus {
@@ -35,8 +36,9 @@ const StyledInput = styled.input`
     border: 1px solid #ee9898;
     box-shadow: 2px 3px 0px 0px #ee9898;
   }
-  @media (max-width: 575.98px) {
-    font-size: 32px;
+  @media ${device.mobileLandscape} {
+    font-size: 44px;
+    width: 36rem;
   }
 `
 
